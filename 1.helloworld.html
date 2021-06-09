@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello world</title>
+    <style>
+        h1 {
+            color: rosybrown;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        //在這標籤裡面才可以執行 JS 或 jQuery
+        //要用 jQuery 之前，記得先引用，否則會出錯！順序很重要！
+        $('h1').css('color', 'blue');
+        $('.box').css('background-color', 'rosybrown');
+    </script>
+
+
+
+</body>
+
+</html>
