@@ -4,23 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex3</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
-
+        img {
+            width: 80%;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col"><img src="./imgs/pui01.png" alt=""></div>
+            <div class="col"><img src="./imgs/pui02.png" alt=""></div>
+            <div class="col"><img src="./imgs/pui03.png" alt=""></div>
+            <div class="col"><img src="./imgs/pui04.png" alt=""></div>
+            <div class="col"><img src="./imgs/pui05.png" alt=""></div>
         </div>
     </div>
 
@@ -31,8 +34,9 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $('img').click(function () {
-            console.log('hi', $(this));
-            $(this).css();
+            //$(this).css('border', '5px solid orange').siblings().css('border', 'none');
+            //$(this).css('border', '5px solid orange').closest('.col').siblings().find(img).css('border', 'none');
+            $(this).closest('.col').siblings().find('img').css('border', 'none').end().end().end().css('border', '5px solid orange');
         })
     </script>
 </body>

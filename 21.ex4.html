@@ -20,8 +20,8 @@
                 <h1>我的表單</h1>
                 <div class="form-group">
                     <label for="exampleInputUsername">Username</label>
-                    <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="UsernameHelp"
-                        placeholder="Enter Username">
+                    <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp"
+                        placeholder="Enter your name">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
@@ -51,9 +51,12 @@
         //新增一個 click 事件監聽器
         $('.auto-input').click(function () {
             // function 裡面會自帶一個內建的 event 參數代表這個事件
-            console.log('hi');
-            console.log(event);
+            //console.log('hi');
+            //console.log(event);
             $('#exampleInputUsername').val('John');
+            $('#exampleInputEmail1').val('john@gmail.com');
+            $('#exampleInputPassword1').val('John');
+
         })
     </script>
 </body>
