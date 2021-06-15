@@ -56,14 +56,32 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
-        $('input:checkbox').click(function () {
-            if ($(this).is(':checked')) {
-                $(this).parent().siblings().css('background-color', 'lightblue').end().css('background-color', 'lightblue');
-            } else {
-                $(this).parent().siblings().css('background-color', 'white').end().css('background-color', 'white');
-            }
+        // $('input').click(function () {
+        //     // 我的
+        //     // if ($(this).is(':checked')) {
+        //     //     $(this).parent().siblings().css('background-color', 'lightblue').end().css('background-color', 'lightblue');
+        //     // } else {
+        //     //     $(this).parent().siblings().css('background-color', 'white').end().css('background-color', 'white');
+        //     // }
 
-        });
+        //     // 老師的
+        //     // prop (property)狀態，判斷現在畫面是否為 checked
+        //     // 條件判斷式，只要是 true 就執行大括號裡面的動作
+        //     if ($(this).prop('checked')) {
+        //         $(this).closest('tr').css('background-color', 'lightblue');
+        //     } else {
+        //         $(this).closest('tr').css('background-color', 'transparent');
+        //     }
+
+        // });
+
+        $('input').click(function () {
+            // 1.把全部的 tr 都改成透明的
+            $('tr').css('background-color', 'transparent');
+            // 2.把有打勾的 tr 都變成藍色的
+            $('input:checked').closest('tr').css('background-color', 'lightblue');
+        })
+
 
     </script>
 

@@ -11,6 +11,7 @@
         img {
             width: 80%;
             border-radius: 50%;
+            border: 5px solid transparent;
         }
     </style>
 </head>
@@ -34,9 +35,15 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $('img').click(function () {
+            // 我的
             //$(this).css('border', '5px solid orange').siblings().css('border', 'none');
             //$(this).css('border', '5px solid orange').closest('.col').siblings().find(img).css('border', 'none');
-            $(this).closest('.col').siblings().find('img').css('border', 'none').end().end().end().css('border', '5px solid orange');
+
+            // 同學的
+            // $(this).closest('.col').siblings().find('img').css('border', 'none').end().end().end().css('border', '5px solid orange');
+
+            // 老師的
+            $(this).css('border', '5px solid orange').parent().siblings().children().css('border', 'none');
         })
     </script>
 </body>
